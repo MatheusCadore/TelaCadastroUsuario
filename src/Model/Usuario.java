@@ -1,17 +1,18 @@
+package Model;
+
 public class Usuario {
 
+    private int id;
     private String nome;
     private String sobrenome;
     private int idade;
-    private int cpf;
-    private int telefone;
+    private String cpf;
+    private String telefone;
     private String email;
     private String senha;
 
-
-    public Usuario(
-            String nome, String sobrenome, int idade, int cpf,
-            int telefone, String email, String senha) {
+    public Usuario(int id, String nome, String sobrenome, int idade, String cpf, String telefone, String email, String senha) {
+        this.id = id;
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.idade = idade;
@@ -19,6 +20,29 @@ public class Usuario {
         this.telefone = telefone;
         this.email = email;
         this.senha = senha;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id= " + id +
+                ", nome= '" + nome + '\'' +
+                ", sobrenome= '" + sobrenome + '\'' +
+                ", idade= " + idade +
+                ", cpf= " + cpf +
+                ", telefone= " + telefone +
+                ", email= '" + email + '\'' +
+                ", senha= '" + senha + '\'' +
+                '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -45,19 +69,19 @@ public class Usuario {
         this.idade = idade;
     }
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 

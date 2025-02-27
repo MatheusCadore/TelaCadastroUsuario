@@ -30,7 +30,7 @@ public class CadastroTela extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 if (controler.validaCadastro()){
                     controler.criaUsuario();
-                    JOptionPane.showMessageDialog(contentPanel,"Usuario cadastrado com sucesso");
+                    JOptionPane.showMessageDialog(contentPanel,"Model.Usuario cadastrado com sucesso");
                 } else {
                     JOptionPane.showMessageDialog(contentPanel,"Cadastro invalido verificar" + controler.mostraErros() );
                 }
