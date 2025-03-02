@@ -9,14 +9,16 @@ import java.sql.SQLException;
 public class Main {
     public static void main(String[] args) {
 
-       //new PrimeiraTela();
+
+        Usuario userSabrina = new Usuario(2,"Sabrina", "Nascimento", 21,
+                "11122233344", "47999888777", "sabrina@gmail.com", "senhaForte");
 
         UsuarioDAO usuarioDAO = new UsuarioDAOImpl();
 
-        try {
-            Usuario usuario = usuarioDAO.get(1);
-            System.out.println(usuario);
-        } catch (SQLException e) {
+
+        try{
+            System.out.println( usuarioDAO.getAll());
+        } catch (SQLException e){
             System.out.println(e);
         }
 

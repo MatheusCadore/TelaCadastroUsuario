@@ -3,6 +3,7 @@ package Model;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class MyJDBC {
     private static String url = "jdbc:mysql://127.0.0.1:3306/userschema";
@@ -18,6 +19,7 @@ public class MyJDBC {
 
         return connection;
     }
+
 
 }
 
